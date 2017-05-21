@@ -16,7 +16,7 @@ nav ul {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
-  background-color: brown;
+  background-color: black;
   text-align: center;
 }
 
@@ -40,11 +40,11 @@ li a:hover {
   background-color: #862222;
 }
 
-.db1{
+/*.db1{
   margin: 0px;
   padding: 0px;
   background-color: yellow;
   width: 100%;
   height: 1280px;
   font-family: 'Kanit', sans-serif;
-}
+}*/
