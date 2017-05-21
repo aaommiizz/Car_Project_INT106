@@ -6,30 +6,6 @@ body{
   padding: 0px;
 }
 
-.loader{
-  width: 50px;
-  height: 50px;
-  border: 5px solid #ccc;
-  border-top-color: #ff6a00;
-  border-radius: 100%;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  animation: round 1s linear infinite;
-}
-@keyframes round {
-  from{transform: rotate(0deg)}
-  to{transform: rotate(360deg)}
-}
-@@keyframes fadout {
-
-}
-
-
-
 nav ul li .ima1{
   padding-top: 5px;
   margin-left: 150px;
