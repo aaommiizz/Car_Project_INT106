@@ -26,7 +26,7 @@ nav li {
 
 }
 
-li a {
+nav li a {
   display: block;
   color: white;
   text-align: center;
@@ -36,15 +36,39 @@ li a {
 
 }
 
-li a:hover {
+#navbar nav li a:hover {
   background-color: #862222;
 }
 
-/*.db1{
-  margin: 0px;
-  padding: 0px;
-  background-color: yellow;
+#footer {
   width: 100%;
-  height: 1280px;
+  height: 400px;
+  background-color: pink;
   font-family: 'Kanit', sans-serif;
-}*/
+  font-size: 20px;
+}
+
+#footer ul{
+  list-style-type: none;
+}
+
+#footer li{
+  float: left;
+  display: inline;
+}
+
+#footer li a{
+  text-align: center;
+}
+
+#footer ul li a .imgcon{
+  padding: 5px;
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+
+#footer .copyright{
+  font-size: 15px;
+}
