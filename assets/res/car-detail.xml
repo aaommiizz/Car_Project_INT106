@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CATALOG>
+	<Car>
+		<NAME>Empire Burlesque</TITLE>
+		<ARTIST>Bob Dylan</ARTIST>
+		<COUNTRY>USA</COUNTRY>
+		<COMPANY>Columbia</COMPANY>
+		<PRICE>10.90</PRICE>
+		<YEAR>1985</YEAR>
+		<IMAGE>facebook.png</IMAGE>
+<Car>
+</CATALOG>
