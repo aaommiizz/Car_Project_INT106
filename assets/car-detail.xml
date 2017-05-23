@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CATALOG>
 	<Car>
-		<BRAND></BRAND>
+		<BRAND>BMW</BRAND>
 		<MODEL>BMW 740Li Sedan</MODEL>
 		<COLOR></COLOR>
 		<DETAIL>BMW 7 Series บีเอ็มดับเบิลยู ซีรี่ส์ 7 โลดแล่นไปในยนตรกรรมระดับหรู
@@ -15,7 +15,7 @@
 
 </Car>
 <Car>
-	<BRAND></BRAND>
+	<BRAND>Mercedes-Benz</BRAND>
 	<MODEL>Mercedes-Benz SLK-Class SLK200  AMG Dynamic</MODEL>
 	<COLOR></COLOR>
 	<DETAIL>Mercedes-Benz SLK 200 AMG Dynamic นับเป็น Roadster
@@ -28,7 +28,7 @@
 
 </Car>
 <Car>
-	<BRAND></BRAND>
+	<BRAND>Honda</BRAND>
 	<MODEL>ALL NEW HONDA CIVIC 2017</MODEL>
 	<COLOR></COLOR>
 	<DETAIL>ALL NEW HONDA CIVIC 2017 เจนเนอเรชั่นที่ 10
@@ -43,24 +43,6 @@
 	<IMAGE>assets/img/haonda civic.jpg</IMAGE>
 
 </Car>
-<Car>
-	<BRAND></BRAND>
-	<MODEL>BMW 740Li Sedan</MODEL>
-	<COLOR></COLOR>
-	<DETAIL>BMW 7 Series บีเอ็มดับเบิลยู ซีรี่ส์ 7 โลดแล่นไปในยนตรกรรมระดับหรู
-บีเอ็มดับเบิลยู กรุ๊ปได้นำนวัตกรรมแห่งอนาคตมาสู่วงการยานยนต์มาโดยตลอด เพราะเราเชื่อว่าวิธีคาดการณ์อนาคตที่ดีที่สุดคือการเป็นผู้สร้างอนาคตขึ้นเอง บีเอ็มดับเบิลยู ซีรี่ส์ 7 คือเครื่องยืนยันว่าเราได้รังสรรค์ยนตรกรรมหรูแห่งอนาคตขึ้นแล้วในวันนี้ นวัตกรรมสุดล้ำ ความสะดวกสบายเหนือชั้น รวมถึงรูปลักษณ์อันทันสมัยและปราดเปรียวจะสร้างประสบการณ์ที่น่าประทับใจและให้ประสิทธิภาพยอดเยี่ยม</DETAIL>
-	<PRICE>6,999,000 บาท</PRICE>
-	<IMAGE>assets/img/bmw s7.jpg</IMAGE>
 
-</Car>
-<Car>
-	<BRAND></BRAND>
-	<MODEL>BMW 740Li Sedan</MODEL>
-	<COLOR></COLOR>
-	<DETAIL>BMW 7 Series บีเอ็มดับเบิลยู ซีรี่ส์ 7 โลดแล่นไปในยนตรกรรมระดับหรู
-บีเอ็มดับเบิลยู กรุ๊ปได้นำนวัตกรรมแห่งอนาคตมาสู่วงการยานยนต์มาโดยตลอด เพราะเราเชื่อว่าวิธีคาดการณ์อนาคตที่ดีที่สุดคือการเป็นผู้สร้างอนาคตขึ้นเอง บีเอ็มดับเบิลยู ซีรี่ส์ 7 คือเครื่องยืนยันว่าเราได้รังสรรค์ยนตรกรรมหรูแห่งอนาคตขึ้นแล้วในวันนี้ นวัตกรรมสุดล้ำ ความสะดวกสบายเหนือชั้น รวมถึงรูปลักษณ์อันทันสมัยและปราดเปรียวจะสร้างประสบการณ์ที่น่าประทับใจและให้ประสิทธิภาพยอดเยี่ยม</DETAIL>
-	<PRICE>6,999,000 บาท</PRICE>
-	<IMAGE>assets/img/bmw s7.jpg</IMAGE>
 
-</Car>
 </CATALOG>

@@ -27,9 +27,10 @@
         <div id='showCar'>
             
         </div>
-
+        
+        <div id = "content" >
         <form>
-        Select a CD:
+        Car  :
         <select id="listbox" name="cds" onchange="showCD(this.value); showCover(this.value);">
         <option value="">Select a CD:</option>
         <option value="Bob Dylan">Bob Dylan</option>
@@ -37,8 +38,9 @@
         <option value="Cat Stevens">Cat Stevens</option>
         </select>
         </form>
-
-
+            <img id ="gujk" src="assets/img/bmw s7.jpg" alt="bjhgjnn">
+        </div>
+        
         <div id="footer">
             <br>FUENGFU CARCARE
             <br>ศูนย์รวมรถสปอร์ต นำเข้า-ส่งออกต่างประทศ
@@ -53,20 +55,40 @@
                 <li><a href="https://www.facebook.com/"><img class="imgcon" src="assets/img/facebook.png" alt=""></a></li>
                 <li><a href="https://www.facebook.com/"><img class="imgcon" src="assets/img/facebook.png" alt=""></a></li>
             </ul>
-            <br>
-            <br>
+            
             <span class = "copyright">Copyright © 2017 FuengfuCarCare Teams Development</span>
-
         </div>
         
         <script>
-            var x,xmlhttp,xmlDoc
-            xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", "assets/car-detail.xml", false);
-            xmlhttp.send();
-            xmlDoc = xmlhttp.responseXML; 
-            x = xmlDoc.getElementsByTagName("Car");
-            table="";
+            var xmlDoc = null;
+            var x = null;
+            function loadDoc() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+            };
+                xhttp.open("GET", "assets/car-detail.xml", true);
+                xhttp.send();
+            }
+            function myFunction(xml) {
+                var i;
+                xmlDoc = xml.responseXML;
+
+                x = xmlDoc.getElementsByTagName("Car");
+            }
+            
+            function displayDetail(select) {
+            //เรามี parameter เป็น select คือ node เริม่ต้นที่ 0 ดังนั้นเลยให้ parameter เริม่ที่ 0 เมื่อกดที่รูปใดๆจะลองเช็คดูนะ
+            document.getElementById("titleMovie").innerHTML = x[select].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+            document.getElementById("title").innerHTML = x[select].getElementsByTagName("title")[0].childNodes[0].nodeValue;
+            document.getElementById("dateRelease").innerHTML = x[select].getElementsByTagName("year")[0].childNodes[0].nodeValue;
+            document.getElementById("description").innerHTML = x[select].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+            document.getElementById("price").innerHTML = x[select].getElementsByTagName("price")[0].childNodes[0].nodeValue;
+            document.getElementById("player").src = x[select].getElementsByTagName("video")[0].childNodes[0].nodeValue;
+            document.getElementById("posterLeft").src = x[select].getElementsByTagName("image")[0].childNodes[0].nodeValue;
+            
             for (i = 0; i <x.length; i++) { 
                 table += "<tr onclick='displayCD(" + i + ")'><td class='artistButton' >";
                 table += x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
