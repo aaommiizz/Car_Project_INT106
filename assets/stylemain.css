@@ -41,11 +41,12 @@ nav li a {
 }
 
 #footer {
-  width: 100%;
+  width: 80%;
   height: 400px;
   background-color: pink;
   font-family: 'Kanit', sans-serif;
   font-size: 20px;
+  text-align: center;
 }
 
 #footer ul{
@@ -53,7 +54,7 @@ nav li a {
 }
 
 #footer li{
-  float: left;
+  align : center;
   display: inline;
 }
 
