@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html 
     <head>
         <meta charset="utf-8">
         <title>Test Project INT106 > FuengFu-Style</title>
         <link rel ="Stylesheet" type="text/css" href="assets/stylemain.css">
+        <script type="text/javascript" src="assets/jquery-3.2.1.min.js">            
+        </script>
     </head>
-    <body>
+    <body >
         <div id="navbar">
         <nav>
             <ul>
@@ -25,20 +27,59 @@
         </div>
 
         <div id='showCar'>
-            
+            <table id = "slide" align="center">
+            <tr>
+                <td align="right"><button class="arrow" onclick="plusDivs(-1)">&#10094;</button></td>
+                <td align="center"><div class="display-container">
+              <img class="mySlides" src="assets/img/honda civic.jpg" >
+              <img class="mySlides" src="assets/img/nissan-march.jpg" >
+              <img class="mySlides" src="assets/img/toyota alphard.jpg" >
+              <img class="mySlides" src="assets/img/mercedes-benz-ss.jpg" >
+              <img class="mySlides" src="assets/img/bmw s7.jpg" ">
+                </div>
+                </td>
+                <td ><button class="arrow" onclick="plusDivs(1)">&#10095;</button></td>
+            </tr>
+        </table>
         </div>
         
+        
+
+
+        
         <div id = "content" >
-        <form>
-        Car  :
-        <select id="listbox" name="cds" onchange="showCD(this.value); showCover(this.value);">
-        <option value="">Select a CD:</option>
-        <option value="Bob Dylan">Bob Dylan</option>
-        <option value="Bee Gees">Bee Gees</option>
-        <option value="Cat Stevens">Cat Stevens</option>
-        </select>
-        </form>
-            <img id ="gujk" src="assets/img/bmw s7.jpg" alt="bjhgjnn">
+        
+            <table width="100%">
+                <tr>
+                    <td colspan="2">
+                        <form>
+                        Car  :
+                            <select id="listbox" onchange="show(value)">
+                            <option value="BMW">BMW</option>
+                            <option value="Mercedes-Benz">Mercedes-Benz</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Nissan">Nissan</option>  
+                        </select>
+                        </form>
+                        
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        <img id ="img" src="assets/img/bmw s7.jpg" alt="img"> 
+                    </td>
+                    <td>
+                        <p id="brand">BMW</p>
+                        <p id="model">BMW 740Li Sedan</p>
+                        <p id="detail">BMW 7 Series บีเอ็มดับเบิลยู ซีรี่ส์ 7 โลดแล่นไปในยนตรกรรมระดับหรูบีเอ็มดับเบิลยู กรุ๊ปได้นำนวัตกรรมแห่งอนาคตมาสู่วงการยานยนต์มาโดยตลอดเพราะเราเชื่อว่าวิธีคาดการณ์อนาคตที่ดีที่สุดคือการเป็นผู้สร้างอนาคตขึ้นเองบีเอ็มดับเบิลยู ซีรี่ส์ 7 คือเครื่องยืนยันว่าเราได้รังสรรค์ยนตรกรรมหรูแห่งอนาคตขึ้นแล้วในวันนี้นวัตกรรมสุดล้ำ ความสะดวกสบายเหนือชั้น รวมถึงรูปลักษณ์อันทันสมัยและปราดเปรียวจะสร้างประสบการณ์ที่น่าประทับใจและให้ประสิทธิภาพยอดเยี่ยม</p>
+                        <p id="price">6,999,000 บาท</p>
+                    </td>
+                </tr>
+            </table>
+            
+            
         </div>
         
         <div id="footer">
@@ -58,61 +99,67 @@
             
             <span class = "copyright">Copyright © 2017 FuengfuCarCare Teams Development</span>
         </div>
-        
-        <script>
-            var xmlDoc = null;
-            var x = null;
-            function loadDoc() {
-            var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
-                myFunction(this);
-            }
-            };
-                xhttp.open("GET", "assets/car-detail.xml", true);
-                xhttp.send();
-            }
-            function myFunction(xml) {
-                var i;
-                xmlDoc = xml.responseXML;
 
-                x = xmlDoc.getElementsByTagName("Car");
-            }
-            
-            function displayDetail(select) {
-            //เรามี parameter เป็น select คือ node เริม่ต้นที่ 0 ดังนั้นเลยให้ parameter เริม่ที่ 0 เมื่อกดที่รูปใดๆจะลองเช็คดูนะ
-            document.getElementById("titleMovie").innerHTML = x[select].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-            document.getElementById("title").innerHTML = x[select].getElementsByTagName("title")[0].childNodes[0].nodeValue;
-            document.getElementById("dateRelease").innerHTML = x[select].getElementsByTagName("year")[0].childNodes[0].nodeValue;
-            document.getElementById("description").innerHTML = x[select].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-            document.getElementById("price").innerHTML = x[select].getElementsByTagName("price")[0].childNodes[0].nodeValue;
-            document.getElementById("player").src = x[select].getElementsByTagName("video")[0].childNodes[0].nodeValue;
-            document.getElementById("posterLeft").src = x[select].getElementsByTagName("image")[0].childNodes[0].nodeValue;
-            
-            for (i = 0; i <x.length; i++) { 
-                table += "<tr onclick='displayCD(" + i + ")'><td class='artistButton' >";
-                table += x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue;
-                table += "</td></tr>";
-            }
-            document.getElementById("demo").innerHTML = table;
+        <script >
+            var slideIndex = 1;
+            showDivs(slideIndex);
 
-            function displayCD(i) {
-                if(i%3==0){
-                    document.getElementById("main").style.backgroundColor = "LightPink";}
-                else if(i%3==1){
-                    document.getElementById("main").style.backgroundColor = "LightGreen";}
-                else {
-                    document.getElementById("main").style.backgroundColor = "LightSkyBlue";}
-                document.getElementById("showCD").innerHTML =
-                "Artist: " +
-                x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
-                "<br>Title: " +
-                x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
-                "<br>Year: " + 
-                x[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
-                "<br><br><img src=res/" + 
-                x[i].getElementsByTagName("IMAGE")[0].childNodes[0].nodeValue+">";
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
             }
+
+            function showDivs(n) {
+              var i;
+              var x = document.getElementsByClassName("mySlides");
+              if (n > x.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = x.length}
+              for (i = 0; i < x.length; i++) {
+                 x[i].style.display = "none";  
+              }
+              x[slideIndex-1].style.display = "block";  
+            }
+
+            function show(str) {
+              if (str=="BMW") {
+                document.getElementById("brand").innerHTML="BMW";
+                document.getElementById("model").innerHTML="BMW 740Li Sedan";
+                document.getElementById("detail").innerHTML="BMW 7 Series บีเอ็มดับเบิลยู ซีรี่ส์ 7 โลดแล่นไปในยนตรกรรมระดับหรูบีเอ็มดับเบิลยู กรุ๊ปได้นำนวัตกรรมแห่งอนาคตมาสู่วงการยานยนต์มาโดยตลอดเพราะเราเชื่อว่าวิธีคาดการณ์อนาคตที่ดีที่สุดคือการเป็นผู้สร้างอนาคตขึ้นเองบีเอ็มดับเบิลยู ซีรี่ส์ 7 คือเครื่องยืนยันว่าเราได้รังสรรค์ยนตรกรรมหรูแห่งอนาคตขึ้นแล้วในวันนี้นวัตกรรมสุดล้ำ ความสะดวกสบายเหนือชั้น รวมถึงรูปลักษณ์อันทันสมัยและปราดเปรียวจะสร้างประสบการณ์ที่น่าประทับใจและให้ประสิทธิภาพยอดเยี่ยม";
+                document.getElementById("price").innerHTML="6,999,000 บาท";
+                document.getElementById("img").src="assets/img/bmw s7.jpg";
+
+              } 
+              if (str=="Mercedes-Benz"){
+                document.getElementById("brand").innerHTML="Mercedes-Benz";
+                document.getElementById("model").innerHTML="Mercedes-Benz SLK-Class SLK200  AMG Dynamic";
+                document.getElementById("detail").innerHTML="Mercedes-Benz SLK 200 AMG Dynamic นับเป็น Roadster รุ่นล่าสุดของ Mercedes Benz SLK-Class ที่ผสมผสานความหรูหรา        และความสปอร์ตไว้ได้อย่างลงตัว สำหรับ Mercedes-Benz SLK 200        มาพร้อมกับเครื่องยนต์เบนซินแถวเรียง 4 สูบ เทอร์โบ ความจุกระบอกสูบ 1.8 ลิตร พละกำลังสูงสุด 184 แรงม้า";
+                document.getElementById("price").innerHTML="3,490,000 บาท";
+                document.getElementById("img").src="assets/img/mercedes-benz-ss.jpg";
+              }
+              else if (str=="Honda"){
+                document.getElementById("brand").innerHTML="Honda";
+                document.getElementById("model").innerHTML="ALL NEW HONDA CIVIC 2017";
+                document.getElementById("detail").innerHTML="ALL NEW HONDA CIVIC 2017 เจนเนอเรชั่นที่ 10 ที่ได้รับการสร้างสรรค์และพัฒนาให้สามารถก้าวข้ามทุกข้อจำกัด เพื่อมุ่งสู่การเป็นซีวิค ที่สมบูรณ์แบบในทุกมิติและก้าวล้ำนำสมัยที่สุด ด้วยการยกระดับการออกแบบให้มีความทันสมัย และหรูหราในสไตล์สปอร์ต ผสานกับนวัตกรรมยานยนต์ อาทิ ขุมพลังจากเทคโนโลยี VTEC TURBO ใหม่ ที่ให้สมรรถนะที่ทรงพลังและมีอัตราการประหยัดน้ำมันที่ดีเยี่ยม พร้อมเทคโนโลยีที่ช่วยอำนวยความสะดวกสบาย และอุปกรณ์เพื่อความปลอดภัยที่เหนือระดับ";
+                document.getElementById("price").innerHTML="869,000 บาท";
+                document.getElementById("img").src="assets/img/honda civic.jpg";
+              }
+              else if (str=="Toyota"){
+                document.getElementById("brand").innerHTML="Toyota";
+                document.getElementById("model").innerHTML="Toyota Alphard 3.5 Executive Lounge";
+                document.getElementById("detail").innerHTML="โฉมใหม่มาพร้อมเครื่องยนต์มีการเปลี่ยนแปลงจากรุ่นก่อนบ้าง โดยหันมาใช้เครื่องยนต์สี่สูบขนาด 2,500 ซีซี จับคู่กับเกียร์ CVT และเครื่องยนต์ V6 ขนาด 3,500 ซีซี จับคู่กับเกียร์อัตโนมัติ 6 สปีด นอกจากนี้ ยังมีรุ่นเครื่องยนต์ไฮบริดเป็นทางเลือกโดยใช้เครื่องยนต์ 2,500 ซีซี จับคู่กับมอเตอร์ไฟฟ้า";
+                document.getElementById("price").innerHTML="5,328,000 บาท";
+                document.getElementById("img").src="assets/img/toyota alphard.jpg";
+              }
+              else if (str=="Nissan"){
+                document.getElementById("brand").innerHTML="Nissan";
+                document.getElementById("model").innerHTML="Nissan March นิสสัน มาร์ช 1.2 S MT";
+                document.getElementById("detail").innerHTML="นิสสัน มาร์ช มาพร้อมกับเครื่องยนต์ขนาด 1.2 ลิตร แบบ 3 สูบ รหัส HR12DE ระบบเกียร์ธรรมดา 5 จังหวะ และระบบเกียร์แปรผันอัจฉริยะ XTRONIC CVT ให้ความนุ่มนวลตอบสนองทุกการขับขี่ และประหยัดน้ำมัน";
+                document.getElementById("price").innerHTML="392,000 บาท";
+                document.getElementById("img").src="assets/img/nissan-march.jpg";
+              }
+              
+  
+  }
         </script>
+        
     </body>
 </html>

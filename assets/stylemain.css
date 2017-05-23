@@ -4,6 +4,7 @@ body{
   background-color: black;
   margin: 0px;
   padding: 0px;
+   font-family: 'Kanit', sans-serif;
 }
 
 nav ul li .ima1{
@@ -45,11 +46,12 @@ nav li a {
   font-family: 'Kanit', sans-serif;
   font-size: 15px;
   text-align: center;
+  border-radius: 20px;
 }
 
-#footer ul{
+/*#footer ul{
   list-style-type: none;
-}
+}*/
 
 #footer li{
   align : center;
@@ -68,12 +70,23 @@ nav li a {
 }
 
 
-#footer .copyright{
+/*#footer .copyright{
   font-size: 15px;
-}
+}*/
 
 #content{
     align-content: center;
     background-color: white;
-    margin: 10 px;
+    margin: 10px;
 }
+
+.mySlides{
+    height: 600px;
+    width: 1000px;
+}
+.slide{}
+
+
+/*tr{
+  text-align: center;
+}*/
