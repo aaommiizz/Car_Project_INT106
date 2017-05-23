@@ -43,6 +43,31 @@
 	<IMAGE>assets/img/haonda civic.jpg</IMAGE>
 
 </Car>
+<<<<<<< HEAD
 
+=======
+<Car>
+	<BRAND></BRAND>
+	<MODEL>Toyota Alphard 3.5 Executive Lounge</MODEL>
+	<COLOR></COLOR>
+	<DETAIL>โฉมใหม่มาพร้อมเครื่องยนต์มีการเปลี่ยนแปลงจากรุ่นก่อนบ้าง
+		โดยหันมาใช้เครื่องยนต์สี่สูบขนาด 2,500 ซีซี จับคู่กับเกียร์ CVT
+		และเครื่องยนต์ V6 ขนาด 3,500 ซีซี จับคู่กับเกียร์อัตโนมัติ 6 สปีด
+		นอกจากนี้ ยังมีรุ่นเครื่องยนต์ไฮบริดเป็นทางเลือกโดยใช้เครื่องยนต์ 2,500 ซีซี
+		จับคู่กับมอเตอร์ไฟฟ้า</DETAIL>
+	<PRICE>5,328,000 บาท</PRICE>
+	<IMAGE>assets/img/toyota alphard.jpg</IMAGE>
+
+</Car>
+<Car>
+	<BRAND></BRAND>
+	<MODEL>Nissan March นิสสัน มาร์ช 1.2 S MT</MODEL>
+	<COLOR></COLOR>
+	<DETAIL>นิสสัน มาร์ช มาพร้อมกับเครื่องยนต์ขนาด 1.2 ลิตร แบบ 3 สูบ
+		รหัส HR12DE ระบบเกียร์ธรรมดา 5 จังหวะ และระบบเกียร์แปรผันอัจฉริยะ
+		XTRONIC CVT ให้ความนุ่มนวลตอบสนองทุกการขับขี่ และประหยัดน้ำมัน</DETAIL>
+	<PRICE>392,000 บาท</PRICE>
+	<IMAGE>assets/img/nissan-march.jpg</IMAGE>
+>>>>>>> 589c3766207eec14d214418180fc392da4800966
 
 </CATALOG>
