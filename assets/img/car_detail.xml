@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <CATALOG>
 	<Car>
 		<BRAND>BMW</BRAND>
@@ -66,5 +66,5 @@
 		XTRONIC CVT ให้ความนุ่มนวลตอบสนองทุกการขับขี่ และประหยัดน้ำมัน</DETAIL>
 	<PRICE>392,000 บาท</PRICE>
 	<IMAGE>assets/img/nissan-march.jpg</IMAGE>
-
+</Car>
 </CATALOG>
